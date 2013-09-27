@@ -1,0 +1,15 @@
+<!-- CheckWindowClose.htm -->
+<html>
+<head>
+<title>CheckWindowClose</title>
+</head>
+<body>視窗真的關閉了才執行某段程式</body>
+</html>
+<script language="javascript">
+window.onunload = isWindowClosed;
+
+function isWinClosed(){
+  //開啟測試視窗是否關閉的網頁
+  var newWin = window.open('isWinClosed.htm','_blank');
+}
+</script>

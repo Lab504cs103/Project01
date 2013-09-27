@@ -1,0 +1,23 @@
+<!-- isWinClosed.htm -->
+<html>
+<head>
+<title>Is Window Really Closed??</title>
+<script language="javascript">
+window.onload = isParentWindowClosed;
+
+function isParentWindowClosed(){
+  if (window.opener.closed){
+    //do something while window is closed
+    alert('偵測到視窗關閉');
+  }
+  else{
+    //do nothing while window refresh or redirect
+    alert('視窗只是重新整理或導向到其他網頁，沒有關閉');
+  }
+  window.top.opener = '';
+  window.close();
+}
+</script>
+</head>
+<body></body>
+</html>

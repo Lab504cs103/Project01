@@ -1,0 +1,63 @@
+<!--宣告css-->
+
+ <style type="text/css">
+  A:link {text-decoration: none;color:black} 
+  A:visited {text-decoration: none}
+  
+  .style1 {
+	border-color: #000080;
+	border-width: 1px;
+    border-style: solid;
+	background-color: #F3EDFD;
+	font-family: Verdana;
+	font-size: 85%;
+	cursor: hand;
+  }
+ </style> 
+
+ 
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Menu</title>
+<base target="main">
+</head>
+
+<body background="../exam/images/background.gif">
+
+  <center>
+  <p><b><font color="#000080">嘉義高中 教室空堂 預約系統</font></b></p>
+
+  <table width="70%" cellpadding="2" style="border-collapse: collapse" bordercolor="#111111">
+   <tr>
+    <td class="style1" onMouseOver="this.style.backgroundColor='#FFCCBD';" onMouseOut="this.style.backgroundColor='#F3EDFD';" align="middle">
+    <a href="show_reserve.php">查看教室使用情形</a></td>
+    <td class="style1" onMouseOver="this.style.backgroundColor='#FFCCBD';" onMouseOut="this.style.backgroundColor='#F3EDFD';" align="middle">
+    <a href="check_passwd.php?type=1">開始預約教室</a></td>
+    <td class="style1" onMouseOver="this.style.backgroundColor='#FFCCBD';" onMouseOut="this.style.backgroundColor='#F3EDFD';" align="middle">
+    <a href="check_passwd.php?type=2">取消預約教室</a></td>
+    <td class="style1" onMouseOver="this.style.backgroundColor='#FFCCBD';" onMouseOut="this.style.backgroundColor='#F3EDFD';" align="middle">
+    <a href="check_passwd.php?type=3">進入管理模式</a></td>
+
+   </tr>
+  </table>
+  <p>
+
+  <br><br>
+
+  </center> 
+
+
+</body>
+
+</html>
+
+<script language=JavaScript>
+if(document.all){
+var tags=document.all.tags("a")
+for (var i=0;i<tags.length;i++)
+tags(i).outerHTML=tags(i).outerHTML.replace(">"," hidefocus=true>")}
+</script>

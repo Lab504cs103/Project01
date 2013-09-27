@@ -1,0 +1,129 @@
+ 
+Building configuration...
+
+Current configuration : 1011 bytes
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname com5
+!
+boot-start-marker
+boot-end-marker
+!
+logging message-counter syslog
+!
+no aaa new-model
+!
+dot11 syslog
+ip source-route
+!
+!
+ip cef
+!
+ --More--         !
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+!
+!
+!
+voice-card 0
+!
+!
+!
+!
+!
+archive
+ log config
+  hidekeys
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ --More--          ip address 192.168.1.126 255.255.255.192
+ --More--          shutdown
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ no ip address
+ shutdown
+ duplex auto
+ speed auto
+!
+interface Serial0/3/0
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+interface Serial0/3/1
+ no ip address
+ shutdown
+ clock rate 2000000
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+ --More--         !
+ --More--         !
+!
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+ccm-manager fax protocol cisco
+!
+mgcp fax t38 ecm
+!
+!
+!
+!
+!
+!
+line con 0
+ --More--         line aux 0
+ --More--         line vty 0 4
+ login
+!
+scheduler allocate 20000 1000
+end
+
+com5#
+com5#
